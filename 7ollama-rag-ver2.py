@@ -8,6 +8,12 @@ from langchain.prompts import ChatPromptTemplate
 from langchain.chains.retrieval import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 
+# **PDF는 업로드할 때만 한 번 처리**
+# **질문할 때는 기존 벡터 저장소를 사용**하여 빠르게 답변 생성
+# **PDF를 새로 업로드 하면 다시 벡터 저장소를 생성**하여 최신 문서 반영
+
+
+
 # =====================
 #  UI 스타일 설정
 # =====================
